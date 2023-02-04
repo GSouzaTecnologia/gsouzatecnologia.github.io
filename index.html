@@ -104,12 +104,13 @@
           <div class="hero-block">
             <div class="content-block-hero">
               <h1 class="heading">
-                Apoiamos o seu negócio a entregar valor para o seu cliente
+                Apoiamos o seu negócio a entregar valor para o seu
+                <span id="type">cliente</span>
               </h1>
               <p class="paragraph-hero">
                 Conte com o nosso time para ajudar você no desenvolvimento e
-                implementação das suas ideias. Torne realidade o seu produto e
-                entregue valor ao seu cliente de maneira rápida e efetiva.
+                implementação das suas ideias. Torne realidade o seu produto
+                e/ou idéia e entregue valor de maneira rápida e efetiva.
               </p>
               <div class="button-wrap-hero">
                 <a href="#servicos" class="button w-button">
@@ -322,6 +323,17 @@
           </div>
           <div class="logo-wrap">
             <img
+              data-src="images/sodru.webp"
+              data-srcset="images/sodru.webp 500w, images/sodru.webp 500w"
+              data-sizes="(max-width: 479px) 82vw, (max-width: 991px) 260px, 16vw"
+              alt="Sodrugestvo - Brasil"
+              width="160px"
+              height="96px"
+              class="light-logo lazyload"
+            />
+          </div>
+          <div class="logo-wrap">
+            <img
               data-src="images/mol.webp"
               data-srcset="images/mol.webp 500w, images/mol.webp 500w"
               data-sizes="(max-width: 479px) 82vw, (max-width: 991px) 260px, 16vw"
@@ -406,6 +418,19 @@
       </div>
       <div class="legal-wrap">
         <div class="legal-text">© 2022 - Todos os direitos reservados</div>
+        <div class="legal-text">
+          <a
+            href="https://secure.d4sign.com.br/gopaperless/sustentabilidade/0de5a0af-5ca9-46da-bd3d-c8c7e587e6d5/GSouza-Tecnologia.html"
+            target="_blank"
+          >
+            <img
+              src="https://secure.d4sign.com.br/img/selos_2022_empresa-pt.png"
+              width="180px;"
+              title="D4Sign"
+              alt="D4Sign"
+            />
+          </a>
+        </div>
         <div class="legal-text-copy">
           <p>design by</p>
           <span>
@@ -459,12 +484,22 @@
     <!--  Count Up Interaction  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
-
     <script>
       jQuery(document).ready(function ($) {
         $('.counterup').counterUp({
           delay: 100, // the delay time in ms
           time: 2000, // the speed time in ms
+        });
+      });
+    </script>
+    <!--  Typewriter Interaction  -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        new Typewriter('#type', {
+          strings: ['cliente', 'parceiro', 'fornecedor', 'colaborador'],
+          autoStart: true,
+          loop: true,
         });
       });
     </script>
