@@ -661,6 +661,8 @@ body {
   position: absolute;
   top: 0;
   z-index: 1;
+  width: 70vw;
+  right: 0;
 }
 .content-block-right {
   padding: 25px 25px 25px 55px;
