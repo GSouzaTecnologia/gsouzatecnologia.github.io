@@ -1547,6 +1547,7 @@ body {
     z-index: 0;
     left: 0;
     opacity: 0.3;
+    width: 100vw;
   }
   .image-block {
     margin-bottom: 35px;
