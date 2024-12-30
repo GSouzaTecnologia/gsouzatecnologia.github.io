@@ -22,7 +22,7 @@ body {
   display: flex;
   -webkit-justify-content: center;
   justify-content: center;
-  min-height: 72vh;
+  min-height: 100vh;
   padding: 120px 3% 0;
 }
 .container {
@@ -322,6 +322,8 @@ body {
 }
 .button-wrap-hero {
   margin-top: 35px;
+  z-index: 3;
+  position: relative;
 }
 .link {
   color: #546681;
@@ -654,26 +656,11 @@ body {
   margin-bottom: 0;
   max-width: 450px;
 }
-.hero-image-wrap {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  padding: 30px;
-  position: relative;
-}
 .content-block-right,
 .hero-image-wrap {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 350px;
-  width: 50%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
 .content-block-right {
   padding: 25px 25px 25px 55px;
@@ -1553,6 +1540,12 @@ body {
     justify-content: center;
     width: 100%;
   }
+  .content-block-right,
+  .hero-image-wrap {
+    z-index: 0;
+    left: 0;
+    opacity: 0.3;
+  }
   .image-block {
     margin-bottom: 35px;
     min-height: auto;
@@ -1688,10 +1681,6 @@ body {
   }
   .feature-icon {
     margin-bottom: 15px;
-  }
-  .hero-image-wrap {
-    min-height: auto;
-    width: 100%;
   }
   .content-block-right {
     padding-left: 25px;
@@ -1945,9 +1934,6 @@ body {
     justify-content: center;
     padding-left: 20px;
     padding-right: 20px;
-  }
-  .hero-image-wrap {
-    padding: 10px;
   }
   .testimonial-content-wrap,
   .testimonial-image-block {
