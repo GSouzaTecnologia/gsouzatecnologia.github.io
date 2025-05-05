@@ -70,11 +70,14 @@ function initTypewriter() {
   const typewriterElement = document.getElementById('type');
   if (typewriterElement) {
     new Typewriter(typewriterElement, {
-      strings: ['cliente', 'negócio', 'projeto', 'fornecedor'],
+      strings: ['cliente', 'negócio', 'projeto', 'fornecedor', 'colaborador'],
       autoStart: true,
       loop: true,
       delay: 75,
       deleteSpeed: 50,
+      stringSplitter: (text) => {
+        return [...text];
+      },
     });
   }
 }
