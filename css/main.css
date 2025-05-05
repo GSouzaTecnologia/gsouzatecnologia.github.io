@@ -311,6 +311,8 @@ img {
   letter-spacing: -0.5px;
   line-height: 1.3;
   margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .highlight-text {
@@ -337,12 +339,14 @@ img {
   display: inline-block;
   position: relative;
   text-align: left;
+  min-width: 220px;
 }
 
 .Typewriter__wrapper {
   color: var(--primary-color);
   position: relative;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .Typewriter__cursor {
@@ -379,6 +383,7 @@ img {
     display: inline-block;
     position: relative;
     text-align: center;
+    min-width: 220px;
   }
 
   /* Optimize hero image for mobile */
@@ -410,12 +415,24 @@ img {
     display: block;
     transform: scale(1.2);
   }
+
+  /* Make sure heading handles wrapping well */
+  .heading {
+    font-size: 2.2rem;
+    min-height: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
 }
 
 @media screen and (max-width: 479px) {
   .Typewriter {
-    min-width: 100px;
-    width: 100px;
+    min-width: 220px;
+    width: 220px;
   }
 
   /* Update hero height to accommodate larger image */
@@ -449,6 +466,13 @@ img {
     margin: 0 auto;
     display: block;
     transform: scale(1.4);
+  }
+
+  /* Heading styles for very small screens */
+  .heading {
+    font-size: 1.9rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
   }
 
   /* Further optimize styling for smallest screens */
