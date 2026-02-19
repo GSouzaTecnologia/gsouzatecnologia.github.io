@@ -81,16 +81,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     typewriter
-      .typeString('negócio')
+      .typeString('o seu negócio')
       .pauseFor(2000)
       .deleteAll()
-      .typeString('startup')
+      .typeString('a sua startup')
       .pauseFor(2000)
       .deleteAll()
-      .typeString('empresa')
+      .typeString('a sua empresa')
       .pauseFor(2000)
       .deleteAll()
-      .typeString('projeto')
+      .typeString('o seu projeto')
       .pauseFor(2000)
       .start();
   }
