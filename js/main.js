@@ -69,30 +69,46 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Typewriter effect
+  // Typewriter effect - lazy load library
   const typewriterElement = document.getElementById('typewriter');
-  if (typewriterElement && typeof Typewriter !== 'undefined') {
-    const typewriter = new Typewriter(typewriterElement, {
-      loop: true,
-      delay: 75,
-      deleteSpeed: 50,
-      cursor: '|',
-      cursorClassName: 'typewriter-cursor',
-    });
+  if (typewriterElement) {
+    const initTypewriter = () => {
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/typewriter-effect@2.1.0/dist/core.js';
+      script.onload = () => {
+        if (typeof Typewriter !== 'undefined') {
+          const typewriter = new Typewriter(typewriterElement, {
+            loop: true,
+            delay: 75,
+            deleteSpeed: 50,
+            cursor: '|',
+            cursorClassName: 'typewriter-cursor',
+          });
 
-    typewriter
-      .typeString('o seu negócio')
-      .pauseFor(2000)
-      .deleteAll()
-      .typeString('a sua startup')
-      .pauseFor(2000)
-      .deleteAll()
-      .typeString('a sua empresa')
-      .pauseFor(2000)
-      .deleteAll()
-      .typeString('o seu projeto')
-      .pauseFor(2000)
-      .start();
+          typewriter
+            .typeString('o seu negócio')
+            .pauseFor(2000)
+            .deleteAll()
+            .typeString('a sua startup')
+            .pauseFor(2000)
+            .deleteAll()
+            .typeString('a sua empresa')
+            .pauseFor(2000)
+            .deleteAll()
+            .typeString('o seu projeto')
+            .pauseFor(2000)
+            .start();
+        }
+      };
+      document.body.appendChild(script);
+    };
+
+    // Load after a small delay to prioritize critical rendering
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(initTypewriter);
+    } else {
+      setTimeout(initTypewriter, 200);
+    }
   }
 
   // Button hover effect with mouse tracking
@@ -200,43 +216,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Parallax effect for orbs
-  const orbs = document.querySelectorAll('.orb, .gradient-orb');
-
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-
-    orbs.forEach((orb, index) => {
-      const speed = 0.5 + index * 0.2;
-      const yPos = -(scrolled * speed);
-      orb.style.transform = `translateY(${yPos}px)`;
-    });
-  });
-
-  // Lazy loading for images
-  if ('loading' in HTMLImageElement.prototype) {
-    const images = document.querySelectorAll('img.lazyload');
-    images.forEach((img) => {
-      img.loading = 'lazy';
-    });
-  } else {
-    // Fallback for browsers that don't support lazy loading
+  // Lazy loading for images (native support check + fallback)
+  if (!('loading' in HTMLImageElement.prototype)) {
     const script = document.createElement('script');
     script.src = 'js/lazysizes.min.js';
     document.body.appendChild(script);
   }
-
-  // Service cards hover effect
-  const serviceCards = document.querySelectorAll('.service-card');
-  serviceCards.forEach((card) => {
-    card.addEventListener('mouseenter', function () {
-      this.style.transform = 'translateY(-8px) scale(1.02)';
-    });
-
-    card.addEventListener('mouseleave', function () {
-      this.style.transform = 'translateY(-4px) scale(1)';
-    });
-  });
 
   // Add subtle animation to tech badges
   const techBadges = document.querySelectorAll('.tech-badge');
@@ -259,29 +244,6 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       100 * (index + 1),
     );
-  });
-
-  // Add glass effect intensity on scroll
-  const glassElements = document.querySelectorAll(
-    '.service-card, .visual-card',
-  );
-
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const windowHeight = window.innerHeight;
-
-    glassElements.forEach((element) => {
-      const rect = element.getBoundingClientRect();
-      const elementCenter = rect.top + rect.height / 2;
-      const distanceFromCenter = Math.abs(windowHeight / 2 - elementCenter);
-      const maxDistance = windowHeight / 2;
-      const intensity = 1 - distanceFromCenter / maxDistance;
-
-      if (intensity > 0) {
-        element.style.backdropFilter = `blur(${20 + intensity * 10}px)`;
-        element.style.webkitBackdropFilter = `blur(${20 + intensity * 10}px)`;
-      }
-    });
   });
 
   // Add magnetic effect to CTA button
