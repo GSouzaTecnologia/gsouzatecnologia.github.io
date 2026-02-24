@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://gsouzatecnologia.com.br/</loc>
-        <lastmod>2023-08-01</lastmod>
+        <lastmod>2026-02-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://gsouzatecnologia.com.br/termos-de-uso</loc>
+        <lastmod>2026-02-24</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://gsouzatecnologia.com.br/politica-de-privacidade</loc>
+        <lastmod>2026-02-24</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://gsouzatecnologia.com.br/politica-de-cookies</loc>
+        <lastmod>2026-02-24</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
 </urlset> 
