@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (typewriterElement) {
     const initTypewriter = () => {
       const script = document.createElement('script');
-      script.src = 'https://unpkg.com/typewriter-effect@2.1.0/dist/core.js';
+      script.src = 'https://unpkg.com/typewriter-effect@2.22.0/dist/core.js';
       script.onload = () => {
         if (typeof Typewriter !== 'undefined') {
           const typewriter = new Typewriter(typewriterElement, {
