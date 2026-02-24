@@ -152,7 +152,7 @@ window.addEventListener('load', function () {
               {
                 title: 'Mais informações',
                 description:
-                  'Para mais informações sobre como tratamos seus dados pessoais, consulte nossa <a href="/politica-de-privacidade">Política de Privacidade</a>. Para dúvidas ou solicitações sobre cookies, entre em contato com nosso DPO pelo e-mail <a href="mailto:privacidade@gilsonsouza.dev">privacidade@gilsonsouza.dev</a>.',
+                  'Para mais informações sobre como tratamos seus dados pessoais, consulte nossa <a href="/politica-de-privacidade">Política de Privacidade</a>. Para dúvidas ou solicitações sobre cookies, entre em contato com nosso DPO pelo e-mail <a href="mailto:privacidade@gsouzatecnologia.com.br">privacidade@gsouzatecnologia.com.br</a>.',
               },
             ],
           },
