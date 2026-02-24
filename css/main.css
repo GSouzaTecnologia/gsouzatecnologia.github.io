@@ -500,7 +500,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: #0055b3;
   margin-bottom: 1rem;
   padding: 0.25rem 1rem;
   background: rgba(0, 122, 255, 0.1);
@@ -1257,11 +1257,11 @@ section {
 #cc-main {
   --cc-font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
 
-  /* Primary brand color */
-  --cc-btn-primary-bg: #007aff;
-  --cc-btn-primary-hover-bg: #0051d5;
-  --cc-btn-primary-border-color: #007aff;
-  --cc-btn-primary-hover-border-color: #0051d5;
+  /* Primary brand color (darkened for contrast on small text) */
+  --cc-btn-primary-bg: #0062cc;
+  --cc-btn-primary-hover-bg: #004da0;
+  --cc-btn-primary-border-color: #0062cc;
+  --cc-btn-primary-hover-border-color: #004da0;
   --cc-btn-primary-color: #fff;
   --cc-btn-primary-hover-color: #fff;
 
