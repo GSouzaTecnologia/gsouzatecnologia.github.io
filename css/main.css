@@ -688,6 +688,7 @@ section {
   );
   animation: rotate 10s linear infinite;
   opacity: 0.1;
+  will-change: transform;
 }
 
 @keyframes rotate {
@@ -802,7 +803,6 @@ section {
 .cta-text {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
 }
 
 /* Footer */
