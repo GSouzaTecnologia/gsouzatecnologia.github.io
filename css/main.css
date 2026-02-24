@@ -342,6 +342,8 @@ body {
 .typewriter-text {
   color: var(--primary);
   font-weight: 500;
+  display: inline-block;
+  min-height: 1.25em;
 }
 
 .typewriter-cursor {
@@ -1181,22 +1183,13 @@ section {
   }
 }
 
-.hero > *,
+/* Hero content is visible immediately for LCP performance */
+
 .service-card,
 .stat,
 .client-logo {
   animation: fadeIn 0.8s ease-out forwards;
   opacity: 0;
-}
-
-.hero > *:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.hero > *:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.hero > *:nth-child(3) {
-  animation-delay: 0.3s;
 }
 
 .service-card:nth-child(1) {

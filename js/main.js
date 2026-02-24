@@ -230,22 +230,6 @@ document.addEventListener('DOMContentLoaded', function () {
     badge.style.transitionDelay = `${index * 50}ms`;
   });
 
-  // Smooth reveal for hero content
-  const heroElements = document.querySelectorAll('.hero > .container > *');
-  heroElements.forEach((el, index) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-
-    setTimeout(
-      () => {
-        el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      },
-      100 * (index + 1),
-    );
-  });
-
   // Add magnetic effect to CTA button
   const ctaButton = document.querySelector('.cta .btn');
   if (ctaButton) {
